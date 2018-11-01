@@ -1,0 +1,13 @@
+
+<div class="container">
+  <h1> <%= @cocktail.name %></h1>
+  <% color = ['danger', 'success', 'info', 'warning'] %>
+  <div class="list-group">
+    <a href="#" class="list-group-item list-group-item-<%= color.sample %>"><%= @cocktail.name %></a>
+  </div>
+
+  <%= link_to '+ Add Ingredients', new_cocktail_dose_path, class: 'btn btn-danger' %>
+
+  <br><br>
+  <%= link_to  '<i class="fas fa-undo"></i> Back'.html_safe, cocktails_path, class: 'btn btn-xs btn-default' %>
+</div>

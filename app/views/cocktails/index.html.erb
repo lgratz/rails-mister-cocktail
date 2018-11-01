@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Cocktails</h1>
+  <% color = ['danger', 'success', 'info', 'warning'] %>
+  <div class="list-group">
+    <% @cocktails.each do |cock| %>
+      <a href="/cocktails/<%= cock.id %>" class="list-group-item list-group-item-<%= color[cock.id%4] %>"><%= cock.name %></a>
+    <% end %>
+  </div>
+
+  <%= link_to '+ Add Cocktail', new_cocktail_path, class: 'btn btn-danger' %>
+</div>
